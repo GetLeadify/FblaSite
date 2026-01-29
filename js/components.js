@@ -20,6 +20,11 @@ function loadHeader() {
                     <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="resources.html">Resources</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>

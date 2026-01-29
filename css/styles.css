@@ -42,8 +42,32 @@
     --border-subtle: 1px solid rgba(0,0,0,0.08);
     --glass-blur: blur(24px);
 
+    --hero-gradient-start: rgba(29,29,31,1);
+    --hero-gradient-end: rgba(66,66,69,1);
+
     /* Animation Timing */
     --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+[data-theme="dark"] {
+    --bg-body: #000000;
+    --bg-surface: #1C1C1E;
+    --bg-surface-glass: rgba(28, 28, 30, 0.75);
+
+    --text-primary: #F5F5F7;
+    --text-secondary: #A1A1A6;
+    --text-tertiary: #48484A;
+    --text-inverse: #000000;
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,0.4);
+    --shadow-xl: 0 24px 60px rgba(0,0,0,0.5);
+
+    --border-subtle: 1px solid rgba(255,255,255,0.1);
+
+    --hero-gradient-start: #FFFFFF;
+    --hero-gradient-end: #A1A1A6;
 }
 
 /* Reset & Base Styles */
@@ -279,15 +303,33 @@ footer {
     animation: pulse 10s ease-in-out infinite alternate;
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 100%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(94, 92, 230, 0.08) 0%, rgba(0,0,0,0) 60%);
+    z-index: -2;
+    opacity: 0.6;
+    animation: float 15s ease-in-out infinite alternate-reverse;
+}
+
 @keyframes pulse {
     0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
     100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
 }
 
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-50px, 50px) scale(1.1); }
+}
+
 .hero h1 {
     font-size: 4.5rem;
     letter-spacing: -0.04em;
-    background: linear-gradient(180deg, rgba(29,29,31,1) 0%, rgba(66,66,69,1) 100%);
+    background: linear-gradient(180deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
@@ -642,4 +684,90 @@ footer {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* Dark Mode Component Overrides */
+[data-theme="dark"] .streak {
+    background: rgba(194, 65, 12, 0.2);
+    border-color: rgba(194, 65, 12, 0.3);
+    color: #FF7134;
+}
+
+[data-theme="dark"] .badge {
+    background: #2C2C2E;
+}
+
+[data-theme="dark"] .badge:hover:not(.locked) {
+    background: #3A3A3C;
+    color: white;
+}
+
+[data-theme="dark"] .session-date {
+    background: #2C2C2E;
+}
+
+[data-theme="dark"] .tag.tutoring {
+    background: rgba(21, 128, 61, 0.2);
+    color: #4ADE80;
+}
+
+[data-theme="dark"] .tag.study-group {
+    background: rgba(79, 70, 229, 0.2);
+    color: #818CF8;
+}
+
+[data-theme="dark"] .option {
+    border-color: #3A3A3C;
+}
+
+[data-theme="dark"] .option:hover {
+    background: #2C2C2E;
+}
+
+[data-theme="dark"] .hero::before {
+     background: radial-gradient(circle at 50% 50%, rgba(0, 113, 227, 0.15) 0%, rgba(94, 92, 230, 0.1) 30%, rgba(0,0,0,0) 70%);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: white;
+    color: black;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #E5E5EA;
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.theme-btn:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .theme-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .hero::after {
+     background: radial-gradient(circle, rgba(94, 92, 230, 0.1) 0%, rgba(0,0,0,0) 60%);
 }
