@@ -14,13 +14,13 @@
         <div class="container">
             <h1>Learning Resources</h1>
 
-            <div class="resources-grid">
+            <div class="grid-3" style="margin-bottom: 4rem;">
                 <!-- Resource 1 -->
                 <div class="resource-card">
                     <div class="resource-icon">📚</div>
                     <h3>Web Dev Roadmap</h3>
                     <p>A complete guide to becoming a Full Stack Developer in 2025.</p>
-                    <a href="#" class="text-link">Read More &rarr;</a>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem; padding-left: 0;">Read Guide &rarr;</a>
                 </div>
 
                 <!-- Resource 2 -->
@@ -28,7 +28,7 @@
                     <div class="resource-icon">🎥</div>
                     <h3>Python for Beginners</h3>
                     <p>Watch our student-created video series on Python basics.</p>
-                    <a href="#" class="text-link">Watch Now &rarr;</a>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem; padding-left: 0;">Watch Series &rarr;</a>
                 </div>
 
                 <!-- Resource 3 -->
@@ -36,14 +36,14 @@
                     <div class="resource-icon">📝</div>
                     <h3>Algorithm Cheat Sheet</h3>
                     <p>Downloadable PDF with common sorting and searching algorithms.</p>
-                    <a href="#" class="text-link">Download PDF &rarr;</a>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem; padding-left: 0;">Download PDF &rarr;</a>
                 </div>
             </div>
 
             <!-- Interactive Quiz Section -->
             <section class="quiz-section">
                 <h2>Test Your Knowledge</h2>
-                <div class="quiz-container" id="quiz-container">
+                <div class="quiz-container" id="quiz-container" style="max-width: 600px; margin: 0 auto;">
                     <div class="quiz-question" id="quiz-question">
                         <h3>Question 1:</h3>
                         <p>Which HTML tag is used to define an internal style sheet?</p>
@@ -59,7 +59,7 @@
                             <input type="radio" name="quiz" value="css"> &lt;css&gt;
                         </label>
                     </div>
-                    <button class="btn btn-accent" id="submit-quiz">Submit Answer</button>
+                    <button class="btn btn-primary" id="submit-quiz">Submit Answer</button>
                     <div class="quiz-result" id="quiz-result"></div>
                 </div>
             </section>

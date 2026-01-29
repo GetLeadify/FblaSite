@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
+    setActiveNavLink();
 });
 
 function loadHeader() {
+    // SVG Icons for modern look
+    const menuIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+
     const headerHTML = `
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">DevHub</a>
+                <a href="index.html" class="logo">DevHub.</a>
                 <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
-                    <span class="bar">☰</span>
+                    ${menuIcon}
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -23,16 +27,15 @@ function loadHeader() {
     const headerElement = document.querySelector('header');
     if (headerElement) {
         headerElement.innerHTML = headerHTML;
-
-        // Initialize mobile menu listener after injecting HTML
         initMobileMenu();
     }
 }
 
 function loadFooter() {
+    const year = new Date().getFullYear();
     const footerHTML = `
         <div class="container">
-            <p>&copy; 2025 DevHub. Created by Students, for Students.</p>
+            <p>&copy; ${year} DevHub. Designed for the Future of Learning.</p>
         </div>
     `;
     const footerElement = document.querySelector('footer');
@@ -50,4 +53,16 @@ function initMobileMenu() {
             navLinks.classList.toggle('active');
         });
     }
+}
+
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    // Wait a brief moment for header to be injected if needed, though usually sequential
+    // Since loadHeader is synchronous, we can just run this.
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
 }

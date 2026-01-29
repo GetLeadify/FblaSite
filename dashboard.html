@@ -15,78 +15,82 @@
             <h1>Student Dashboard</h1>
 
             <div class="dashboard-grid">
-                <!-- User Profile -->
-                <section class="profile-card">
-                    <div class="profile-header">
-                        <div class="avatar">AD</div>
-                        <div>
+                <!-- Sidebar: User Profile -->
+                <aside>
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="avatar">AD</div>
                             <h2>Alex Dev</h2>
                             <p>Level 5 Coder</p>
                         </div>
+                        <div class="streak">
+                            🔥 12 Day Streak
+                        </div>
                     </div>
-                    <div class="streak">
-                        <p>🔥 12 Day Streak</p>
-                    </div>
-                </section>
+                </aside>
 
-                <!-- Learning Progress -->
-                <section class="progress-section">
-                    <h2>My Learning Path</h2>
-                    <div class="progress-item">
-                        <div class="progress-info">
-                            <span>Web Development Fundamentals</span>
-                            <span>75%</span>
+                <!-- Main Content -->
+                <div class="dashboard-content">
+                    <!-- Learning Progress -->
+                    <section class="card progress-section" style="margin-bottom: 2rem;">
+                        <h3>My Learning Path</h3>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Web Development Fundamentals</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar" style="width: 75%;"></div>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Python for Data Science</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 40%;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-info">
-                            <span>Python for Data Science</span>
-                            <span>40%</span>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Algorithms & Data Structures</span>
+                                <span>10%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 10%;"></div>
+                            </div>
                         </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar" style="width: 40%;"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-info">
-                            <span>Algorithms & Data Structures</span>
-                            <span>10%</span>
-                        </div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar" style="width: 10%;"></div>
-                        </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Achievements / Badges -->
-                <section class="achievements-section">
-                    <h2>Achievements</h2>
-                    <div class="badges-grid">
-                        <div class="badge">
-                            <div class="badge-icon">🚀</div>
-                            <span>First Launch</span>
+                    <!-- Achievements / Badges -->
+                    <section class="card achievements-section">
+                        <h3>Achievements</h3>
+                        <div class="badges-grid">
+                            <div class="badge">
+                                <span class="badge-icon">🚀</span>
+                                <span>First Launch</span>
+                            </div>
+                            <div class="badge">
+                                <span class="badge-icon">🐍</span>
+                                <span>Pythonista</span>
+                            </div>
+                            <div class="badge locked">
+                                <span class="badge-icon">🔒</span>
+                                <span>Bug Hunter</span>
+                            </div>
+                            <div class="badge locked">
+                                <span class="badge-icon">🔒</span>
+                                <span>Full Stack</span>
+                            </div>
                         </div>
-                        <div class="badge">
-                            <div class="badge-icon">🐍</div>
-                            <span>Pythonista</span>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">🔒</div>
-                            <span>Bug Hunter</span>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">🔒</div>
-                            <span>Full Stack</span>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
 
     <footer></footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
