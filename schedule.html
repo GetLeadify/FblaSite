@@ -6,6 +6,7 @@
     <title>Schedule - DevHub</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/components.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header></header>
@@ -15,7 +16,7 @@
             <h1>Study Schedule</h1>
 
             <div class="schedule-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">All Sessions</button>
                 <button class="filter-btn" data-filter="tutoring">Live Tutoring</button>
                 <button class="filter-btn" data-filter="study-group">Study Groups</button>
             </div>
@@ -29,11 +30,13 @@
                     </div>
                     <div class="session-details">
                         <h3>Intro to JavaScript</h3>
-                        <p class="time">🕒 4:00 PM - 5:00 PM</p>
-                        <p class="host">Hosted by: Sarah J.</p>
+                        <p class="time" style="color: var(--text-secondary);">4:00 PM - 5:00 PM</p>
+                        <p class="host" style="color: var(--text-secondary);">Hosted by Sarah J.</p>
                         <span class="tag tutoring">Live Tutoring</span>
                     </div>
-                    <button class="btn">Join</button>
+                    <div style="margin-left: auto;">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
                 </div>
 
                 <!-- Session 2 -->
@@ -44,11 +47,13 @@
                     </div>
                     <div class="session-details">
                         <h3>Python Exam Prep</h3>
-                        <p class="time">🕒 6:00 PM - 7:30 PM</p>
-                        <p class="host">Group Leader: Mike T.</p>
+                        <p class="time" style="color: var(--text-secondary);">6:00 PM - 7:30 PM</p>
+                        <p class="host" style="color: var(--text-secondary);">Group Leader: Mike T.</p>
                         <span class="tag study-group">Study Group</span>
                     </div>
-                    <button class="btn">Join</button>
+                    <div style="margin-left: auto;">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
                 </div>
 
                 <!-- Session 3 -->
@@ -59,17 +64,18 @@
                     </div>
                     <div class="session-details">
                         <h3>CSS Grid Layouts</h3>
-                        <p class="time">🕒 3:30 PM - 4:30 PM</p>
-                        <p class="host">Hosted by: Alex Dev</p>
+                        <p class="time" style="color: var(--text-secondary);">3:30 PM - 4:30 PM</p>
+                        <p class="host" style="color: var(--text-secondary);">Hosted by Alex Dev</p>
                         <span class="tag tutoring">Live Tutoring</span>
                     </div>
-                    <button class="btn">Join</button>
+                    <div style="margin-left: auto;">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <footer></footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
